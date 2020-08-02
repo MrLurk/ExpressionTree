@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Api.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -21,6 +22,10 @@ namespace Api.Controllers
         [HttpGet]
         public ActionResult Get()
         {
+            var services = new ExpressionServices();
+            services.NoParaPlusExpressionTest();
+            services.ParaPlusMultiplyExpressionTest();
+            services.ParaObjectExpressionTest();
             return Ok(1);
         }
     }
