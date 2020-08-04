@@ -28,5 +28,14 @@ namespace Api.Controllers
             services.ParaObjectExpressionTest();
             return Ok(1);
         }
+
+
+        [HttpGet("get2")]
+        public ActionResult Get2()
+        {
+            var services = new StudentServices();
+            services.GetAllStudent();
+            return Ok(1);
+        }
     }
 }

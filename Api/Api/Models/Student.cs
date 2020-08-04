@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace Api.Models
 {
+    [Table("T_Student")]
     public class Student
     {
         /// <summary>
